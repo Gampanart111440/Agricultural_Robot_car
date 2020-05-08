@@ -1,0 +1,294 @@
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.netpie.io/microgear.js"></script>
+    <link type="text/css" rel="stylesheet" href="home.css" />
+    <link type="text/css" rel="stylesheet" href="work.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </script>
+    <link type="text/css" rel="stylesheet" href="home.css" />
+    <script>
+        const APPKEY = "vXcEoJnJ609S63z";
+        const APPSECRET = "lcGJMreYG7O6DCFu0IsV2mt70";
+        const APPID = "Robotcar111440";
+        var microgear = Microgear.create({
+            gearkey: APPKEY,
+            gearsecret: APPSECRET
+        });
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่1//////////////////
+        function switchPress1() {
+            if (document.getElementById("cube-switch").className == "cube-switch active") {
+                microgear.chat("pieplug", "OFFWATERING");
+            } else if (document.getElementById("cube-switch").className == "cube-switch") {
+                microgear.chat("pieplug", "ONWATERING");
+            }
+        }
+        microgear.on('message', function (topic, data) {
+            if (data == "ONWATERING") {
+                document.getElementById("cube-switch").className = "cube-switch active";
+            } else if (data == "OFFWATERING") {
+                document.getElementById("cube-switch").className = "cube-switch";
+            }
+        });
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่2//////////////////
+        function switchPress2() {
+            if (document.getElementById("cube-switch2").className == "cube-switch2 active2") {
+                microgear.chat("pieplug", "OFFDRILL");
+            }
+            else if (document.getElementById("cube-switch2").className == "cube-switch2") {
+                microgear.chat("pieplug", "ONDRILL");
+            }
+        }
+        microgear.on('message', function (topic, data) {
+            if (data == "ONDRILL") {
+                document.getElementById("cube-switch2").className = "cube-switch2 active2";
+            } else if (data == "OFFDRILL") {
+                document.getElementById("cube-switch2").className = "cube-switch2";
+            }
+        });
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่3//////////////////
+        function switchPress3() {
+            if (document.getElementById("cube-switch3").className == "cube-switch3 active3") {
+                microgear.chat("pieplug", "OFFSEED");
+            }
+            else if (document.getElementById("cube-switch3").className == "cube-switch3") {
+                microgear.chat("pieplug", "ONSEED");
+            }
+        }
+        microgear.on('message', function (topic, data) {
+            if (data == "ONSEED") {
+                document.getElementById("cube-switch3").className = "cube-switch3 active3";
+            } else if (data == "OFFSEED") {
+                document.getElementById("cube-switch3").className = "cube-switch3";
+            }
+        });
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่4//////////////////
+        function switchPress4() {
+            if (document.getElementById("cube-switch4").className == "cube-switch4 active4") {
+                microgear.chat("pieplug", "OFFPIT");
+            }
+            else if (document.getElementById("cube-switch4").className == "cube-switch4") {
+                microgear.chat("pieplug", "ONPIT");
+            }
+        }
+        microgear.on('message', function (topic, data) {
+            if (data == "ONPIT") {
+                document.getElementById("cube-switch4").className = "cube-switch4 active4";
+            } else if (data == "OFFPIT") {
+                document.getElementById("cube-switch4").className = "cube-switch4";
+            }
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่5//////////////////
+        function switchPress5() {
+            if (document.getElementById("cube-switch5").className == "cube-switch5 active5") {
+                microgear.chat("pieplug", "OFFFORWARD");
+            }
+            else if (document.getElementById("cube-switch5").className == "cube-switch5") {
+                microgear.chat("pieplug", "ONFORWARD");
+            }
+        }
+        microgear.on('message', function (topic, data) {
+            if (data == "ONFORWARD") {
+                document.getElementById("cube-switch5").className = "cube-switch5 active5";
+            } else if (data == "OFFFORWARD") {
+                document.getElementById("cube-switch5").className = "cube-switch5";
+            }
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่6//////////////////
+        function switchPress6() {
+            if (document.getElementById("cube-switch6").className == "cube-switch6 active6") {
+                microgear.chat("pieplug", "OFFBACKWARD");
+            }
+            else if (document.getElementById("cube-switch6").className == "cube-switch6") {
+                microgear.chat("pieplug", "ONBACKWARD");
+            }
+        }
+        microgear.on('message', function (topic, data) {
+            if (data == "ONBACKWARD") {
+                document.getElementById("cube-switch6").className = "cube-switch6 active6";
+            } else if (data == "OFFBACKWARD") {
+                document.getElementById("cube-switch6").className = "cube-switch6";
+            }
+        });
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่7//////////////////
+        function switchPress7() {
+            if (document.getElementById("cube-switch7").className == "cube-switch7 active7") {
+                microgear.chat("pieplug", "OFFTURNLEFT");
+            }
+            else if (document.getElementById("cube-switch7").className == "cube-switch7") {
+                microgear.chat("pieplug", "ONTURNLEFT");
+            }
+        }
+        microgear.on('message', function (topic, data) {
+            if (data == "ONTURNLEFT") {
+                document.getElementById("cube-switch7").className = "cube-switch7 active7";
+            } else if (data == "OFFTURNLEFT") {
+                document.getElementById("cube-switch7").className = "cube-switch7";
+            }
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่8//////////////////
+        function switchPress8() {
+            if (document.getElementById("cube-switch8").className == "cube-switch8 active8") {
+                microgear.chat("pieplug", "OFFTURNRIGHT");
+            }
+            else if (document.getElementById("cube-switch8").className == "cube-switch8") {
+                microgear.chat("pieplug", "ONTURNRIGHT");
+            }
+        }
+        microgear.on('message', function (topic, data) {
+            if (data == "ONTURNRIGHT") {
+                document.getElementById("cube-switch8").className = "cube-switch8 active8";
+            } else if (data == "OFFTURNRIGHT") {
+                document.getElementById("cube-switch8").className = "cube-switch8";
+            }
+        });
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่1//////////////////
+        microgear.on('connected', function () {
+            microgear.setname('controllerplug1');
+            document.getElementById("cube-switch").className = "cube-switch active";
+            document.getElementById("cube-switch").style.display = "block";
+
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่2//////////////////
+        microgear.on('connected', function () {
+            microgear.setname('controllerplug2');
+            document.getElementById("cube-switch2").className = "cube-switch2 active2";
+            document.getElementById("cube-switch2").style.display = "block";
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่3//////////////////
+        microgear.on('connected', function () {
+            microgear.setname('controllerplug3');
+            document.getElementById("cube-switch3").className = "cube-switch3 active3";
+            document.getElementById("cube-switch3").style.display = "block";
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่4//////////////////
+        microgear.on('connected', function () {
+            microgear.setname('controllerplug4');
+            document.getElementById("cube-switch4").className = "cube-switch4 active4";
+            document.getElementById("cube-switch4").style.display = "block";
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่5//////////////////
+        microgear.on('connected', function () {
+            microgear.setname('controllerplug5');
+            document.getElementById("cube-switch5").className = "cube-switch5 active5";
+            document.getElementById("cube-switch5").style.display = "block";
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่6//////////////////
+        microgear.on('connected', function () {
+            microgear.setname('controllerplug6');
+            document.getElementById("cube-switch6").className = "cube-switch6 active6";
+            document.getElementById("cube-switch6").style.display = "block";
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่7//////////////////
+        microgear.on('connected', function () {
+            microgear.setname('controllerplug7');
+            document.getElementById("cube-switch7").className = "cube-switch7 active7";
+            document.getElementById("cube-switch7").style.display = "block";
+        });
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ปุ่มที่8//////////////////
+        microgear.on('connected', function () {
+            microgear.setname('controllerplug8');
+            document.getElementById("cube-switch8").className = "cube-switch8 active8";
+            document.getElementById("cube-switch8").style.display = "block";
+        });
+        microgear.resettoken();
+        microgear.connect(APPID);
+    </script>
+</head>
+<title>Agricultural Robot Car</title>
+
+<body class="image">
+    <div >
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a class="active" href="Work.html">การทดสอบทำงานในแต่ละส่วน</a></li>
+            <li><a href="invaestigate.html">ตรวจสอบการทำงาน</a></li>
+            <li><a href="Automatic.html">คู่มือการใช้งาน</a></li>
+        </ul>
+        <h1 class="Agricultural" align='left'>Agricultural Robot Car</h1>
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col wt ">เจาะหลุดดิน</div>
+                <div class="col wt1">รดน้ำ</div>
+                <div class="col wt2">ปล่อยเมล็ดพืช</div>
+                <div class="col wt3">ปิดหลุมดิน</div>
+            </div> -->
+            <div class="row">
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" >
+                <div class="col wt"><h1>การควบคุมรถ</h1></div>
+                <div class="col wt1 "><h1>การควบคุมส่วนการทำงาน</h1></div>
+            </div>
+            <div class="row" >
+                <div class="col" >
+                   
+                    <div class="cube-switch5" id="cube-switch5" onclick="switchPress5()">
+                        <span class="switch5">
+                            <span class="switch-state5 off5" style="margin-right:0%">ONFORWARD</span>
+                            <span class="switch-state5 on5" style="margin-left:0%">OFFFORWARD</span>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div href="" class="cube-switch7" id="cube-switch7" onclick="switchPress7()">
+                                <span class="switch7">
+                                    <span class="switch-state7 off7" style="margin-left:0%">ONTURNLEFT</span>
+                                    <span class="switch-state7 on7" style="margin-left:0%">OFFTURNLEFT</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div href="" class="cube-switch8" id="cube-switch8" onclick="switchPress8()">
+                                <span class="switch8">
+                                    <span class="switch-state8 off8" style="margin-left:0%">ONTURNRIGHT</span>
+                                    <span class="switch-state8 on8" style="margin-left:0%">OFFTURNRIGHT</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div href="" class="cube-switch6" id="cube-switch6" onclick="switchPress6()">
+                        <span class="switch6">
+                            <span class="switch-state6 off6" style="margin-left:0%">ONBACKWARD</span>
+                            <span class="switch-state6 on6" style="margin-left:0%">OFFBACKWARD</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div href="" class="cube-switch" id="cube-switch" onclick="switchPress1()">
+                        <span class="switch">
+                            <span class="switch-state off" style="margin-left:0%;">ONWATERING</span>
+                            <span class="switch-state on" style="margin-left:0%">OFFWATERING</span>
+                        </span>
+                    </div>
+                    <div href="" class="cube-switch2" id="cube-switch2" onclick="switchPress2()">
+                        <span class="switch2">
+                            <span class="switch-state2 off2 " style="margin-left:0%">ONDRILL</span>
+                            <span class="switch-state2 on2" style="margin-left:0%">OFFDRILL</span>
+                        </span>
+                    </div>
+                    <div href="" class="cube-switch3" id="cube-switch3" onclick="switchPress3()">
+                        <span class="switch3">
+                            <span class="switch-state3 off3" style="margin-left:0%">ONSEED</span>
+                            <span class="switch-state3 on3" style="margin-left:0%">OFFSEED</span>
+                        </span>
+                    </div>
+                    <div href="" class="cube-switch4" id="cube-switch4" onclick="switchPress4()">
+                        <span class="switch4">
+                            <span class="switch-state4 off4" style="margin-left:0%">ONPIT</span>
+                            <span class="switch-state4 on4" style="margin-left:0%">ONPIT</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

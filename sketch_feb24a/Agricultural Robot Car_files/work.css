@@ -1,0 +1,13 @@
+.image {
+  background: #006699 url("image6.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  /* width: 100vw; */
+  min-height: 100vh;
+  /* border: 5px solid black; */
+  filter: saturate(2000%);
+  -webkit-filter: saturate(200%);
+  -moz-filter: saturate(2000%);
+  -o-filter: saturate(500%);
+  -ms-filter: saturate(200%);
+}
